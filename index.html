@@ -3,25 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dvice Navbar</title>
+  <title>Synch Technologies</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
+
+    <!-- Popup Overlay -->
+<div id="popupOverlay" class="popup-overlay">
+  
+  <!-- Popup Box -->
+  <div class="popup-box">
+
+    <!-- Close Button -->
+    <span class="popup-close" id="closePopup">&times;</span>
+
+    <!-- Logo -->
+    <div class="popup-logo">
+      <img src="images/mainlogo.png" alt="Logo">
+    </div>
+
+    <!-- Content -->
+    <h3 class="popup-title">Welcome to Synch Technologies</h3>
+    <p class="popup-text">
+      Smart Automation • Security • Home Theatre Solutions  
+      Experience smarter living with cutting-edge technology designed for comfort, convenience, and safety.
+    </p>
+
+    <button class="popup-btn" id="okPopup">Get Started</button>
+  </div>
+
+</div>
+
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
   <div class="container">
 
     <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="your-logo.png" width="50" class="me-2">
+    <a class="navbar-brand " style="background-color: white;border-radius: 30px;" href="#">
+      <img src="images/mainlogo.png" width="160" class="me-2">
     </a>
 
     <!-- Toggler (Mobile) -->
@@ -32,15 +61,15 @@
     <!-- Desktop Menu -->
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#service">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
 
       <div class="hotline">
-        Hotline: <span>0761-8523-398</span>
+        Hotline : <span> +91 9894842235</span>
       </div>
     </div>
 
@@ -56,12 +85,11 @@
 
   <div class="offcanvas-body">
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link text-black" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link text-black" href="#">About Us</a></li>
-      <li class="nav-item"><a class="nav-link text-black" href="#">Services</a></li>
-      <li class="nav-item"><a class="nav-link text-black" href="#">Projects</a></li>
-      <li class="nav-item"><a class="nav-link text-black" href="#">Pages</a></li>
-      <li class="nav-item"><a class="nav-link text-black" href="#">Contact</a></li>
+      <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-black" href="#about">About Us</a></li>
+      <li class="nav-item"><a class="nav-link text-black" href="#service">Services</a></li>
+      <li class="nav-item"><a class="nav-link text-black" href="#gallery">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link text-black" href="#contact">Contact</a></li>
     </ul>
   </div>
 </div>
@@ -76,24 +104,22 @@
 
     <!-- TOP BADGES -->
     <div class="d-flex top-badges mb-4">
-      <div class="feature-badge"><img src="icon1.png" width="20"> Smart Control</div>
-      <div class="feature-badge"><img src="icon2.png" width="20"> Customization</div>
-      <div class="feature-badge"><img src="icon3.png" width="20"> Voice Activation</div>
+      <div class="feature-badge"><i class="bi bi-check-circle-fill" style="color: #0055A4;font-size: 25px;"></i> Smart Control</div>
+      <div class="feature-badge"><i class="bi bi-check-circle-fill" style="color: #0055A4;font-size: 25px"></i> Customized Automation</div>
+      <div class="feature-badge"><i class="bi bi-check-circle-fill" style="color: #0055A4;font-size: 25px"></i> Voice-Enabled Living</div>
+
     </div>
 
     <!-- TITLE -->
-    <h1 class="hero-title">
-      LIVE SMARTER, <br>
-      FEEL SAFER
-    </h1>
+    <h1 class="hero-title" id="typeHeading"></h1>
+
 
     <!-- BUTTON + TEXT -->
     <div class="d-flex align-items-center hero-row mt-4">
       <button class="hero-btn">Get Started</button>
 
-      <p class="mb-0 hero-text w-50 ps-lg-4">
-        Experience total home control with smart systems that protect,
-        automate, and simplify your everyday life.
+      <p class="mb-0 hero-text w-50 ps-lg-4" style="color: white;font-weight: 600;font-size: 17px;">
+       Experience seamless home automation with intelligent systems that enhance comfort, boost security, and simplify your everyday living.
       </p>
     </div>
 
@@ -103,10 +129,10 @@
       <!-- Feature 1 -->
       <div class="col-lg-4 col-md-6">
         <div class="feature-item">
-          <img src="energy.png" width="40">
+          <img src="images/energy.png" style="height: 50px;width: 50px;background-color: rgb(130, 128, 128);border-radius: 50px;">
           <div>
             <h5>Energy Efficiency</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Smart energy management that optimizes lighting, climate, and appliance usage — reducing costs while improving comfort.</p>
           </div>
         </div>
       </div>
@@ -114,19 +140,19 @@
       <!-- Feature 2 -->
       <div class="col-lg-4 col-md-6">
         <div class="feature-item">
-          <img src="security.png" width="40">
+          <img src="images/secure.png" style="height: 50px;width: 50px;background-color: rgb(130, 128, 128);border-radius: 50px;">
           <div>
             <h5>Security Integration</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Advanced protection with real-time alerts, smart sensors, and automated monitoring to keep your home safe and connected.</p>
           </div>
         </div>
       </div>
 
       <!-- Counter -->
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-12" style="background-color: aliceblue;max-width: 200px;min-height: 70px;">
         <div class="counter-box">
           <div class="counter-number" id="deviceCounter">0</div>
-          <div class="counter-label">Compatible Devices</div>
+          <div class="counter-label " >Compatible Devices</div>
         </div>
       </div>
 
@@ -135,19 +161,22 @@
   </div>
 </section>
 
-<section class="about-section py-5">
-  <div class="container">
+<section class="about-section py-5" id="about" >
+  <div class="container" data-aos="fade-down">
 
     <p class="about-label">About Us</p>
-
+     <p class="about-label">            SYNCH TECHNOLOGIES </p>
     <h2 class="about-title">
       EMPOWERING HOMES, <br> REDEFINING LIVING
     </h2>
 
-    <p class="about-subtext">
-      We turn ordinary homes into intelligent ecosystems with smart tech, <br>
-      seamless integration, and innovation—solving comfort, security, and <br>
-      efficiency challenges.
+    <p class="about-subtext " style="text-align: justify;hyphens: auto;">
+      Founded on a commitment to seamless living and uncompromising <br>
+        security, Sync Technologies is a premier provider of integrated Home <br>
+        Theatre, Home Automation, and Home Security solutions. We design, <br> 
+        install, and service bespoke systems that blend cutting-edge  <br>
+        technology with intuitive control, elevating residential environments <br> into 
+        smart, secure, and immersive living spaces.
     </p>
 
     <div class="row mt-5 align-items-start">
@@ -156,14 +185,13 @@
       <div class="col-lg-6">
 
         <div class="d-flex align-items-start gap-4 mb-4">
-          <img src="images/ecfour.jpg"  class="left-img">
+          <img src="images/abtn.jpg"  class="left-img">
 
            <ul class="checklist">
         <li><i class="bi bi-check-circle-fill"></i> One App To Control Everything</li>
         <li><i class="bi bi-check-circle-fill"></i> Future-Proof Technology, Ready To Scale</li>
         <li><i class="bi bi-check-circle-fill"></i> Design-First Approach, No Messy Wires</li>
-        <li><i class="bi bi-check-circle-fill"></i> Real-Time Support With Remote Diagnostics</li>
-        <li><i class="bi bi-check-circle-fill"></i> Works With Alexa, Google Home, Apple HomeKit</li>
+
         </ul>
         </div>
 
@@ -172,14 +200,14 @@
           not the other way around.
         </p>
 
-        <button class="read-btn">Read More</button>
+        <a href="#contact" class="btn read-btn">Read More</a>
 
       </div>
 
       <!-- RIGHT COLUMN -->
       <div class="col-lg-6 position-relative">
 
-        <img src="images/ecfour.jpg" class="right-img mb-4">
+        <img src="images/hometheater.jpg" class="right-img mb-4">
 
         <!-- FLOATING BOX -->
         <div class="floating-box">
@@ -188,12 +216,10 @@
           <p class="box-text">Smart living made a reality.</p>
         </div>
 
-        <p class="quote">
-          “A Smart Home Isn’t About <br> Devices— It’s About Freedom,<br> 
+        <p class="quote " >
+          “A Smart Home Isn’t <br> About  Devices— It’s <br> About Freedom, 
           Comfort, And Peace  Of Mind.”
         </p>
-
-        <p class="quote-author">David Arman, Founder</p>
 
       </div>
 
@@ -203,10 +229,10 @@
 </section>
 
 
-<section class="features-section py-5">
+<section class="features-section py-5" id="service">
   <div class="container text-center">
 
-    <p class="features-label">Future-Ready Features</p>
+    <p class="features-label">Our Core Services</p>
 
     <h2 class="features-title">INNOVATIVE TECH, BUILT INTO YOUR LIFE</h2>
 
@@ -214,86 +240,121 @@
       From intelligent security to energy-saving automation, we deliver integrated smart systems tailored
       for comfort, safety, and effortless control. Explore what we can do for your lifestyle.
     </p>
+  </div>
+</section>
 
-    <div class="row g-4 mt-4">
+<section class="cards-section ">
+  <div class="container">
+    <div class="row g-4">
 
-      <!-- CARD 1 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="feature-card">
-          <img src="images/ecfour.jpg" class="feature-icon">
-
-          <h4 class="feature-title">Smart Security & Surveillance</h4>
-          <p class="feature-text">
-            Real-time alerts, HD cameras, motion sensors,  
-            and remote access to protect what matters, wherever you are.
-          </p>
-
-          <a href="#" class="btn feature-btn">Learn More</a>
+      <!-- Repeat this card 10 times -->
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/hometheater.jpg" class="card-img" alt="">
+          <h5 class="card-title"> Home Theatres</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
         </div>
       </div>
 
-      <!-- CARD 2 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="feature-card">
-          <img src="images/ecfour.jpg" class="feature-icon">
-
-          <h4 class="feature-title">Intelligent Lighting Control</h4>
-          <p class="feature-text">
-            Set the mood or automate your lighting  
-            based on time, motion, or voice commands.
-          </p>
-
-          <a href="#" class="btn feature-btn">Learn More</a>
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/abtn.jpg" class="card-img" alt="">
+          <h5 class="card-title"> Home Automations</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
         </div>
       </div>
 
-      <!-- CARD 3 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="feature-card">
-          <img src="images/ecfour.jpg" class="feature-icon">
-
-          <h4 class="feature-title">Climate & Energy Management</h4>
-          <p class="feature-text">
-            Control temperature, humidity, and  
-            energy usage with intelligent scheduling and AI learning.
-          </p>
-
-          <a href="#" class="btn feature-btn">Learn More</a>
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/gate.webp" class="card-img" alt="">
+          <h5 class="card-title"> Automatic Gates</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
         </div>
       </div>
 
-      <!-- CARD 4 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="feature-card">
-          <img src="images/ecfour.jpg" class="feature-icon">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/cctv.jpg" class="card-img" alt="">
+          <h5 class="card-title"> CCTV</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
+        </div>
+      </div>
 
-          <h4 class="feature-title">Smart Entertainment Systems</h4>
-          <p class="feature-text">
-            Bring immersive audio-visual experiences into every room  
-            with seamless multi-room control.
-          </p>
+      <!-- 5th -->
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/securitysystem.webp" class="card-img" alt="">
+          <h5 class="card-title"> Security Systems</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
+        </div>
+      </div>
 
-          <a href="#" class="btn feature-btn">Learn More</a>
+      <!-- 6th -->
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/videodoor.jpg" class="card-img" alt="">
+          <h5 class="card-title">Video Door Phones</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- 7th -->
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/arch.jpeg" class="card-img" alt="">
+          <h5 class="card-title"> Architectural lighting’s</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- 8th -->
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/step.jpg" class="card-img" alt="">
+          <h5 class="card-title">Step light controllers</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- 9th -->
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/pressure.webp" class="card-img" alt="">
+          <h5 class="card-title">Pressure pump, Heat Pumps</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- 10th -->
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
+        <div class="custom-card">
+          <img src="images/ups.jpg" class="card-img" alt="">
+          <h5 class="card-title">Solar, Softner and UPS solutions</h5>
+          <a href="#" class="btn card-btn">Learn More</a>
         </div>
       </div>
 
     </div>
-
   </div>
 </section>
 
 
+
 <section class="choose-section py-5">
-  <div class="container">
+  <div class="container" data-aos="zoom-in">
 
     <!-- SMALL LABEL -->
-    <p class="choose-label">Why Choose Dvice</p>
+    <p class="choose-label">Why Choose  Sync Technologies</p>
 
     <!-- MAIN HEADING -->
     <h2 class="choose-title">DESIGNED TO UNDERSTAND YOUR LIFE</h2>
 
     <!-- SUB HEADING -->
-    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sapiente tempora facere dolor ad alias laborum cupiditate, nihil hic, architecto, quaerat enim in voluptate impedit reprehenderit numquam cum placeat magni.</p>
+    <p style="text-align: center;"> At Sync Technologies, we don't just install equipment-we craft 
+        personalized smart- home ecosystems that enrich everyday life. 
+        Our holistic approach ensures every component works in 
+        harmony, delivering intuitive control, breathtaking entertainment, 
+        and ironclad security. </p>
 
     <div class="row mt-5 align-items-start g-5">
 
@@ -301,13 +362,13 @@
       <div class="col-lg-6">
 
         <!-- MAIN IMAGE -->
-        <img src="images/ecfour.jpg" class="choose-img mb-4">
+        <img src="images/why.jpg" class="choose-img mb-4">
 
         <!-- BOTTOM STATS ROW -->
         <div class="row g-4">
 
           <!-- CARD 1 -->
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="zoom-out">
             <div class="stats-card">
               <h1 class="stats-number">12+</h1>
               <h5 class="stats-title">Years Experience</h5>
@@ -316,7 +377,7 @@
           </div>
 
           <!-- CARD 2 -->
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="zoom-out">
             <div class="stats-card">
               <h1 class="stats-number">4.9</h1>
               <div class="stars">★★★★★</div>
@@ -332,7 +393,7 @@
       <div class="col-lg-6">
 
         <!-- FEATURE 1 -->
-        <div class="feature-item">
+        <div class="feature-item" data-aos="fade-down">
           <i class="bi bi-check-circle-fill"></i>
           <div>
             <h5 class="feature-title">Expertise You Can Trust</h5>
@@ -346,7 +407,7 @@
         <hr class="feature-divider">
 
         <!-- FEATURE 2 -->
-        <div class="feature-item">
+        <div class="feature-item" data-aos="fade-down">
           <i class="bi bi-check-circle-fill"></i>
           <div>
             <h5 class="feature-title">Seamless Integration</h5>
@@ -360,7 +421,7 @@
         <hr class="feature-divider">
 
         <!-- FEATURE 3 -->
-        <div class="feature-item">
+        <div class="feature-item" data-aos="fade-down">
           <i class="bi bi-check-circle-fill"></i>
           <div>
             <h5 class="feature-title">Unmatched Reliability</h5>
@@ -374,7 +435,7 @@
         <hr class="feature-divider">
 
         <!-- FEATURE 4 -->
-        <div class="feature-item">
+        <div class="feature-item" data-aos="fade-down" >
           <i class="bi bi-check-circle-fill"></i>
           <div>
             <h5 class="feature-title">Dedicated Support</h5>
@@ -385,28 +446,6 @@
           </div>
         </div>
 
-
-        <div class="feature-item">
-          <i class="bi bi-check-circle-fill"></i>
-          <div>
-            <h5 class="feature-title">Dedicated Support</h5>
-            <p class="feature-desc">
-              Our professionals offer full consultation, installation, and aftercare,
-              ensuring a smooth experience from start to smart.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <i class="bi bi-check-circle-fill"></i>
-          <div>
-            <h5 class="feature-title">Dedicated Support</h5>
-            <p class="feature-desc">
-              Our professionals offer full consultation, installation, and aftercare,
-              ensuring a smooth experience from start to smart.
-            </p>
-          </div>
-        </div>
 
       </div>
 
@@ -421,25 +460,25 @@
   <div class="container">
 
     
-    <div class="row g-4">
+    <div class="row g-4" id="gallery">
 
       <!-- 12 GALLERY ITEMS -->
       <!-- Repeat for each image -->
       <!-- IMAGE 1 -->
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/hometheater.jpg" class="gallery-img">
           <div class="gallery-overlay">
-            <h4>Smart Home</h4>
+            <h4>Home Theater</h4>
             <p>Experience modern living</p>
           </div>
         </div>
       </div>
 
       <!-- IMAGE 2 -->
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/why.jpg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Automation</h4>
             <p>Full home control</p>
@@ -448,9 +487,9 @@
       </div>
 
       <!-- IMAGE 3 -->
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/abtn.jpg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Lighting</h4>
             <p>Intelligent brightness</p>
@@ -459,9 +498,9 @@
       </div>
 
       <!-- IMAGE 4 -->
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/securitysystem.webp" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Security</h4>
             <p>Advanced protection</p>
@@ -471,9 +510,9 @@
 
       <!-- IMAGE 5 - 12 -->
       <!-- Just repeat the same structure -->
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/why.jpg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Smart Control</h4>
             <p>Next-gen tech</p>
@@ -481,9 +520,9 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/galtwo.jpg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Energy Saving</h4>
             <p>Eco-friendly homes</p>
@@ -491,9 +530,9 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/galone.webp" class="gallery-img">
           <div class="gallery-overlay">
             <h4>AI Integration</h4>
             <p>Smart automation</p>
@@ -501,9 +540,9 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/galthree.webp" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Voice Control</h4>
             <p>Hands-free system</p>
@@ -511,9 +550,9 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/galfour.jpg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Automation Hub</h4>
             <p>One-touch control</p>
@@ -521,9 +560,9 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/galfive.jpeg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Luxury Homes</h4>
             <p>Premium lifestyle</p>
@@ -531,9 +570,9 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/digitallock.jpg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Digital Lock</h4>
             <p>Modern access</p>
@@ -541,9 +580,9 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12" data-aos="flip-right">
         <div class="gallery-item">
-          <img src="images/ecfour.jpg" class="gallery-img">
+          <img src="images/galsix.jpg" class="gallery-img">
           <div class="gallery-overlay">
             <h4>Smart Living</h4>
             <p>Future-ready solutions</p>
@@ -652,7 +691,11 @@
             <div class="col-lg-3 col-md-6 col-12">
               <div class="review-card">
                 <div class="stars">★★★★★</div>
-                <p class="review-text">Amazing service and excellent support!</p>
+                <p class="review-text">
+                Synch Technologies transformed my home setup! Smooth installation, 
+                great support, and everything works flawlessly. Highly recommended!
+                </p>
+
                 <div class="review-avatar">A</div>
                 <h5 class="review-name">Arun Kumar</h5>
                 <p class="review-role">Homeowner</p>
@@ -666,7 +709,11 @@
             <div class="col-lg-3 col-md-6 col-12">
               <div class="review-card">
                 <div class="stars">★★★★★</div>
-                <p class="review-text">Amazing service and excellent support!</p>
+                <p class="review-text">
+                The automation system is amazing—lighting, climate, and security 
+                all work seamlessly. Their team is skilled, polite, and very responsive.
+                </p>
+
                 <div class="review-avatar">A</div>
                 <h5 class="review-name">Arun Kumar</h5>
                 <p class="review-role">Homeowner</p>
@@ -679,7 +726,11 @@
             <div class="col-lg-3 col-md-6 col-12">
               <div class="review-card">
                 <div class="stars">★★★★★</div>
-                <p class="review-text">Amazing service and excellent support!</p>
+                <p class="review-text">
+                Synch Technologies transformed my home setup! Smooth installation, 
+                great support, and everything works flawlessly. Highly recommended!
+                </p>
+
                 <div class="review-avatar">A</div>
                 <h5 class="review-name">Arun Kumar</h5>
                 <p class="review-role">Homeowner</p>
@@ -708,7 +759,7 @@
 
 
 
-<section class="contact-section py-5">
+<section class="contact-section py-5" id="contact">
   <div class="container">
 
     <div class="row g-5">
@@ -730,7 +781,7 @@
           <i class="bi bi-telephone-fill contact-icon"></i>
           <div>
             <h6 class="contact-subtitle">Hotline</h6>
-            <p class="contact-text">0761-8523-398</p>
+            <p class="contact-text">+91  9894842235 </p>
           </div>
         </div>
 
@@ -741,7 +792,7 @@
           <i class="bi bi-envelope-fill contact-icon"></i>
           <div>
             <h6 class="contact-subtitle">Mail Address</h6>
-            <p class="contact-text">Hello@Domainsite.Com</p>
+             <p class="contact-text">synctechnologiess@gmail.com</p>
           </div>
         </div>
 
@@ -752,7 +803,7 @@
           <i class="bi bi-geo-alt-fill contact-icon"></i>
           <div>
             <h6 class="contact-subtitle">Main Office</h6>
-            <p class="contact-text">KLLG St, No.99, Pku City, ID 28289</p>
+            <p class="contact-text"> #58 B/1, Bangalore Bypass Road, Near Agarwal Eye Hospital, Hosur - 635109</p>
           </div>
         </div>
 
@@ -770,14 +821,14 @@
       <!-- RIGHT SECTION (FORM) -->
       <div class="col-lg-6">
 
-        <form>
+        <form id="contactForm">
 
           <div class="row g-3">
 
             <!-- Name -->
             <div class="col-md-6">
               <label class="form-label">Name*</label>
-              <input type="text" class="form-control contact-input" placeholder="Your Name">
+              <input type="text" id="fullName" class="form-control contact-input" placeholder="Your Name">
             </div>
 
             <!-- Phone -->
@@ -787,32 +838,32 @@
                 <span class="input-group-text country-code">
                   🇮🇩 +91
                 </span>
-                <input type="text" class="form-control border-0 bg-transparent text-white" placeholder="Your Phone Number">
+                <input type="text" id="phone" class="form-control border-0 bg-transparent text-white" placeholder="Your Phone Number">
               </div>
             </div>
 
             <!-- Email -->
             <div class="col-12">
               <label class="form-label">Email*</label>
-              <input type="email" class="form-control contact-input" placeholder="Your Email">
+              <input type="email" id="email" class="form-control contact-input" placeholder="Your Email">
             </div>
 
             <!-- Subject -->
             <div class="col-12">
               <label class="form-label">Subject*</label>
-              <input type="text" class="form-control contact-input" placeholder="What do you want to know?">
+              <input type="text" id="subject" class="form-control contact-input" placeholder="What do you want to know?">
             </div>
 
             <!-- Message -->
             <div class="col-12">
               <label class="form-label">Message*</label>
-              <textarea class="form-control contact-input" rows="6" placeholder="Write detail here..."></textarea>
+              <textarea class="form-control contact-input" id="message" rows="6" placeholder="Write detail here..."></textarea>
             </div>
 
           </div>
 
           <!-- Button -->
-          <button class="btn send-btn mt-4" type="submit">
+          <button class="btn send-btn  mt-4" type="submit">
             Send Message
           </button>
 
@@ -831,7 +882,7 @@
       <!-- LOGO + ABOUT -->
       <div class="col-lg-4 col-md-6">
         <div class="footer-logo mb-3">
-          <img src="images/logo.png" alt="Logo">
+          <img src="images/mainlogo.png" style="background-color: white;" alt="Logo">
         </div>
         <p class="footer-about">
           We deliver cutting-edge home automation, security, 
@@ -850,11 +901,11 @@
       <div class="col-lg-2 col-md-6">
         <h5 class="footer-heading">Quick Links</h5>
         <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -862,11 +913,11 @@
       <div class="col-lg-3 col-md-6">
         <h5 class="footer-heading">Our Services</h5>
         <ul class="footer-links">
-          <li><a href="#">Home Automation</a></li>
-          <li><a href="#">Smart Security Systems</a></li>
-          <li><a href="#">Home Theatre Setup</a></li>
-          <li><a href="#">AI-Based Automation</a></li>
-          <li><a href="#">Smart Lighting</a></li>
+          <li><a href="#service">Home Automation</a></li>
+          <li><a href="#service">Smart Security Systems</a></li>
+          <li><a href="#service">Home Theatre Setup</a></li>
+          <li><a href="#service">AI-Based Automation</a></li>
+          <li><a href="#service">Smart Lighting</a></li>
         </ul>
       </div>
 
@@ -876,17 +927,18 @@
 
         <div class="footer-contact">
           <i class="bi bi-telephone-fill"></i>
-          <p>0761-8523-398</p>
+          <p>+91 9894842235</p>
         </div>
 
         <div class="footer-contact">
           <i class="bi bi-envelope-fill"></i>
-          <p>Hello@Domainsite.Com</p>
+          <p>synctechnologiess@gmail.com</p>
         </div>
 
         <div class="footer-contact">
           <i class="bi bi-geo-alt-fill"></i>
-          <p>KLLG St. No.99, Pku City, ID 28289</p>
+          <p> #58 B/1, Bangalore Bypass Road,
+ Near Agarwal Eye Hospital, Hosur - 635109</p>
         </div>
       </div>
 
@@ -894,16 +946,29 @@
 
     <!-- BOTTOM BAR -->
     <div class="footer-bottom text-center mt-4 pt-3">
-      <p class="mb-0">© 2025 Synch Technologies. All rights reserved.</p>
+      <p class="mb-0">© 2025 Synch Technologies. All rights reserved. Developed By <a href="#" class="text-white" style="text-decoration: none;">Tech Mayon</a></p>
     </div>
 
   </div>
 </footer>
+<button class="fire-scroll-top" id="fireScrollTop">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+
+<div class="fixed-social-bar">
+    <a href="#" class="icon insta"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="icon fb"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="icon tw"><i class="bi bi-twitter-x"></i></a>
+    <a href="https://wa.me/1234567890" target="_blank" class="icon wa"><i class="bi bi-whatsapp"></i></a>
+    <a href="tel:+1234567890" class="icon phone"><i class="bi bi-telephone-fill"></i></a>
+</div>
 
 
 
-
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -945,6 +1010,115 @@ function animateCounter(id, endValue, duration) {
 // Start Counter
 animateCounter("cornerCounter", 1200, 2000); // 2 seconds
 </script>
+<script>
+const lines = [
+  "LIVE SMARTER,",
+  "FEEL SAFER"
+];
 
+let index = 0;      
+let charIndex = 0;  
+let deleting = false;
+
+let typingSpeed = 80;   // ← renamed from speed
+let deleteSpeed = 50;   // optional different delete speed
+
+const display = document.getElementById("typeHeading");
+
+function typeLoop() {
+  
+  let current = lines[index];
+
+  if (!deleting) {
+    // Typing
+    display.innerHTML = current.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === current.length) {
+      deleting = true;
+      setTimeout(typeLoop, 1200); // pause before deleting
+      return;
+    }
+
+  } else {
+    // Deleting
+    display.innerHTML = current.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      deleting = false;
+      index = (index + 1) % lines.length;
+    }
+  }
+
+  setTimeout(typeLoop, deleting ? deleteSpeed : typingSpeed);
+}
+
+typeLoop();
+</script>
+
+
+ <script>
+     window.addEventListener("load", () => {
+      const preloader = document.getElementById("firePreloader");
+      preloader.classList.add("fire-hidden");
+    });
+    const scrollBtn = document.getElementById("fireScrollTop");
+
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+<script>
+// Show popup after 5 seconds (5000ms)
+setTimeout(() => {
+  document.getElementById("popupOverlay").classList.add("active");
+}, 5000);
+
+// Close popup
+document.getElementById("closePopup").onclick = () => {
+  document.getElementById("popupOverlay").classList.remove("active");
+};
+
+document.getElementById("okPopup").onclick = () => {
+  document.getElementById("popupOverlay").classList.remove("active");
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // ✅ Initialize EmailJS
+    emailjs.init("cvVSKba5mxNG51hBz"); // 🔹 Replace with your EmailJS public key
+
+    // ✅ Form submission handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const templateParams = {
+        fullName: document.getElementById("fullName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+      };
+
+      console.log("Sending data:", templateParams); // Debug log
+
+      // ✅ Send via EmailJS
+      emailjs.send("service_c3jjr4g", "template_rescw57", templateParams)
+        .then(function(response) {
+          alert("Thank you for contacting us. We will get back to you soon.");
+          document.getElementById("contactForm").reset();
+        }, function(error) {
+          alert("❌ Failed to send message: " + JSON.stringify(error));
+          console.error("EmailJS Error:", error);
+        });
+    });
+  </script>
+  
 </body>
 </html>
