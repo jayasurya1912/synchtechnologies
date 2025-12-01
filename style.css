@@ -55,7 +55,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url("images/homeban.jpg") center/cover no-repeat;
+  background: url("images/banone.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   color: #fff;
@@ -186,7 +186,7 @@ body {
 
 .choose-section {
   background: #041725;
-  color: #fff;
+  color: white;
 }
 
 .choose-label {
@@ -205,7 +205,7 @@ body {
 .choose-subtext {
   font-size: 18px;
   max-width: 650px;
-  color: #d2d2d2;
+  color: white;
 }
 
 /* IMAGE */
@@ -516,6 +516,11 @@ body {
 
   .about-title {
     font-size: 28px;
+    text-align: center;
+  }
+  .about-label
+  {
+    text-align: center;
   }
 
   .left-img {
