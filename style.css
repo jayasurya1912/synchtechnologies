@@ -33,7 +33,7 @@ body {
     }
 
     .hotline span {
-      color: #0055A4;
+      color: #ddefff;
       font-weight: 600;
     }
 
@@ -94,6 +94,15 @@ body {
 
 /* BUTTON */
 .hero-btn {
+  background: #0D8DFF;
+  padding: 14px 34px;
+  border-radius: 40px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+.hero-btn:hover {
   background: #0D8DFF;
   padding: 14px 34px;
   border-radius: 40px;
@@ -565,6 +574,7 @@ body {
   margin-top: 10px;
 }
 
+
 /* CARD STYLE */
 .feature-card {
   background: #062033;
@@ -635,6 +645,15 @@ body {
   width: 250px;
   margin-bottom: 20px;
   opacity: 0.9;
+}
+
+.features-subtext {
+  max-width: 700px;
+  font-size: 18px;
+  color: #d2d2d2;
+  margin-top: 10px;
+  text-align: justify;
+  hyphens: auto;
 }
 }
 .choose-section {
@@ -1420,6 +1439,17 @@ body {
 .popup-btn:hover {
   background: #1175e5;
 }
+.blw
+{
+  text-align: center;
+}
 
-
+@media(max-width:550px)
+{
+  .blw
+  {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
 
